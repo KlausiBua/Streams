@@ -1,2 +1,5 @@
-package beispiel1.htlgkr.KlausnerL22066;public enum CombatType {
+package beispiel1.htlgkr.KlausnerL22066;
+
+public enum CombatType {
+    MELEE, RANGED
 }
