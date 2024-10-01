@@ -1,5 +1,5 @@
 package beispiel1.htlgkr.KlausnerL22066;
 
 public enum CombatType {
-    MELEE, RANGED
+    MELEE, RANGED, NONE
 }

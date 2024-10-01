@@ -72,4 +72,17 @@ public class Weapon {
     public void setCombatType(CombatType combatType) {
         this.combatType = combatType;
     }
+
+    @Override
+    public String toString() {
+        return "Weapon{" +
+                "name='" + name + '\'' +
+                ", combatType=" + combatType +
+                ", damageType=" + damageType +
+                ", damage=" + damage +
+                ", speed=" + speed +
+                ", strength=" + strength +
+                ", value=" + value +
+                '}';
+    }
 }
