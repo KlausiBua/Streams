@@ -31,7 +31,7 @@ public class Main {
 
         weapons.sort((w1, w2) -> {
             return Integer.compare(w1.getDamage(), w2.getDamage());
-        });
+            });
 
         weapons.forEach(System.out::println);
 
@@ -40,8 +40,7 @@ public class Main {
         List<Weapon> sortedList = new ArrayList<>();
         sortedList = weapons.stream()
                 .sorted(Comparator
-                        .comparingInt(Weapon::getDamage)
-                        .thenComparing(Weapon::getCombatType)
+                        .comparing(Weapon::getCombatType)
                         .thenComparing(Weapon::getDamageType)
                         .thenComparing(Weapon::getName))
                 .toList();
@@ -54,7 +53,7 @@ public class Main {
 
         sortedList.forEach(System.out::println);
 
-        Printable printable = (List<Weapon> list) -> list.forEach(System.out::println);
+        Printable printable = list -> list.forEach(item -> System.out.println(item.toString()));
 
     }
 
