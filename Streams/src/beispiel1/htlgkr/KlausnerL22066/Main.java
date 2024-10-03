@@ -37,12 +37,25 @@ public class Main {
 
         System.out.println();
 
-        weapons.sort(Comparator.comparing(Weapon::getCombatType)
-                .thenComparing(Weapon::getDamageType)
-                .thenComparing(Weapon::getName)
-        );
+        List<Weapon> sortedList = new ArrayList<>();
+        sortedList = weapons.stream()
+                .sorted(Comparator
+                        .comparingInt(Weapon::getDamage)
+                        .thenComparing(Weapon::getCombatType)
+                        .thenComparing(Weapon::getDamageType)
+                        .thenComparing(Weapon::getName))
+                .toList();
 
         weapons.forEach(System.out::println);
+
+        System.out.println();
+        System.out.println("Sorted");
+        System.out.println();
+
+        sortedList.forEach(System.out::println);
+
+        Printable printable = (List<Weapon> list) -> list.forEach(System.out::println);
+
     }
 
 }
